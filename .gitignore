@@ -1,0 +1,18 @@
+# secrets
+.annas_key
+*.key
+.env
+
+# fichiers téléchargés
+*.epub
+*.pdf
+*.mobi
+*.azw3
+*.fb2
+*.lit
+*.rtf
+
+# divers
+__pycache__/
+*.pyc
+.DS_Store
