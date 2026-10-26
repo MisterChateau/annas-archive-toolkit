@@ -36,8 +36,23 @@ chmod +x anna_search.py anna_download.py
 
 ### Clé membre Anna's Archive
 
-L'API de téléchargement exige une clé de membre (adhésion à vie, ~5 € sur
-le site). Deux façons de la fournir :
+L'API de téléchargement exige une clé de membre — c'est un **abonnement
+mensuel** (pas un paiement unique). Paliers officiels :
+
+| Palier | Prix | Fast downloads |
+|---|---|---|
+| Brilliant Bookworm | 3–7 $/mois | 25 / jour |
+| Lucky Librarian | 4–10 $/mois | 50 / jour |
+| paliers supérieurs | — | davantage |
+
+Le prix exact dépend du pouvoir d'achat du pays. Les paliers se cumulent.
+La clé se trouve sur la page *Donate* du site officiel (`annas-archive.org`,
+miroirs `.gl` / `.li` / `.se`).
+
+⚠️ Méfie-toi des domaines qui vendent une « lifetime premium membership »
+(`annas-archive.sh` et compagnie) : ce ne sont pas les sites officiels.
+
+Deux façons de fournir la clé :
 
 ```bash
 # variable d'environnement
@@ -117,8 +132,8 @@ fichiers partiels, et tronque les noms de fichiers trop longs (limite ext4 :
 
 ## Limites connues
 
-- **Quota** : 25 téléchargements/jour avec un compte membre standard
-  (`HTTP 429` sur tous les domaines = quota épuisé, réessayer le lendemain).
+- **Quota** : 25 téléchargements/jour avec le palier d'entrée (~3-7 $/mois).
+  Abonnement **mensuel**, pas à vie. `HTTP 429` sur tous les domaines = quota épuisé.
 - **Couverture** : on ne trouve que ce qui est indexé par LibGen. Un livre très
   récent, un auto-édition ou un texte jamais scanné restera introuvable.
 - **Fichiers fantômes** : certains `md5` existent en base mais le fichier a été
